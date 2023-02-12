@@ -7,7 +7,7 @@ export default function Post() {
 
 let {postId} = useParams();
 const [post,setPost] = useState({})
-const [title] = useState("");
+const [title,setTitle] = useState("");
 
 useEffect(()=>{
 Axios.get(`http://localhost:3002/api/getFromId/${postId}`).then((data)=>{

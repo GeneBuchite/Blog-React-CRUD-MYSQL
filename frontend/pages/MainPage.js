@@ -1,13 +1,13 @@
 import React,{useState,useEffect} from 'react'
 import Axios from 'axios'
-import {useNavigate} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import '../App.css'
 
 function MainPage() {
 
 const [postList,setPostList] = useState([]);
 
-let history = useNavigate();
+let history = useHistory();
 
 useEffect(()=>{
 Axios.get("http://localhost:3002/api/get").then((data)=>{

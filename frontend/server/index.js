@@ -77,13 +77,5 @@ console.log(err)
 
 
 app.listen(PORT, ()=>{
-    console.log(`Server is running on ${PORT}`);
-    
+    console.log(`Server is running on ${PORT}`)
 })
-
-db.query("SELECT * FROM posts", (err,result)=>{
-    if(err) {
-    console.log(err)
-    } else {
-        console.log(result)
-    } })
